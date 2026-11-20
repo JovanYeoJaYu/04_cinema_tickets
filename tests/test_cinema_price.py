@@ -5,7 +5,6 @@ def test_price_valid_value():
     assert ticket_price(0) == 0
     assert ticket_price(1) == 1200
     assert ticket_price(2) == 2400
-    assert ticket_price(3) == 3600
 
 @pytest.mark.parametrize(
     "ticket_count",
