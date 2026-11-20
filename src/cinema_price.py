@@ -6,4 +6,7 @@ def ticket_price(ticket_count):
     if ticket_count < 0:
         raise ValueError("argument outside permitted range")
 
-    return max(ticket_count, 1) * 1200
+    if ticket_count == 0:
+        return 0
+
+    return ticket_count * 1200

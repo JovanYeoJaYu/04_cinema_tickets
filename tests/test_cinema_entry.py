@@ -3,7 +3,8 @@ from src.cinema_entry import can_watch
 
 def test_can_watch_valid_value():
     assert can_watch(17) == True
-    assert can_watch(16) == False
+    assert can_watch(16) == True
+    assert can_watch(15) == False
     
 
 @pytest.mark.parametrize(

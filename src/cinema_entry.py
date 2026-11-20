@@ -6,4 +6,4 @@ def can_watch(age):
     if age < 0:
         raise ValueError("argument outside permitted range")
 
-    return age > 16
+    return age >= 16

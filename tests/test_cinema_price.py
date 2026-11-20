@@ -2,6 +2,7 @@ import pytest
 from src.cinema_price import ticket_price
 
 def test_price_valid_value():
+    assert ticket_price(0) == 0
     assert ticket_price(1) == 1200
     assert ticket_price(2) == 2400
     assert ticket_price(3) == 3600
@@ -11,6 +12,7 @@ def test_price_valid_value():
     [
         ("Number"), #Not an integer
         (-1), #Negative number
+        (1.5), #Float (no decimals allowed)
     ],
 )
 
