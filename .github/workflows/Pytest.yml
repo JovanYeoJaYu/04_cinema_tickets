@@ -1,6 +1,21 @@
 name: Run pytest
 
-on: push
+on: 
+  workflow_dispatch:
+
+  push:
+    branches: [ main, development ]
+    paths:
+      - "src/**"
+      - "tests/**"
+      - ".github/workflows/Pytest.yml"
+  
+  pull_request:
+    branches: [ main ]
+    paths:
+      - "src/**"
+      - "tests/**"
+      - ".github/workflows/Pytest.yml"
 
 jobs:
   test:
